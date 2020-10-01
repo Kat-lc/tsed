@@ -12,9 +12,9 @@ meta:
 
 # Configuration
 
-@@Configuration@@ lets you configure quickly your server via decorator. This decorator takes your configuration and merges it with the default server configuration.
+@@Configuration@@ lets you quickly configure your server via decorator. This decorator takes your configuration and merges it with the default server configuration.
 
-The default configuration is as following:
+The default configuration is as follows:
 
 ```json
 {
@@ -40,7 +40,7 @@ The default configuration is as following:
 }
 ```
 
-You can customize your configuration as following on `Server.ts`level:
+You can customize your configuration as follows on `Server.ts`level:
 
 <Tabs class="-code">
   <Tab label="v5.56.0+">
@@ -105,7 +105,7 @@ export class Server {}
 
 - type: @@Env@@
 
-The environment profiles. By default the environment profile is equal to `NODE_ENV`.
+The environment profiles. By default, the environment profile is equal to `NODE_ENV`.
 
 ```typescript
 import {Env} from "@tsed/core";
@@ -154,9 +154,9 @@ See the [HTTPs project example](https://github.com/TypedProject/example-ts-expre
 
 - type: @@EndpointDirectoriesSettings@@
 
-Mount all given controllers and map controllers to his corresponding endpoints.
+Mount all given controllers and map controllers to the corresponding endpoints.
 
-Ts.ED provides the possibility to mount multiple Rest path instead of the default path `/rest`.
+Ts.ED provides the possibility to mount multiple Rest paths instead of the default path `/rest`.
 This option allow you to define a version for an endpoint and select which controllers you want associate with the given path.
 
 <<< @/docs/snippets/configuration/server-endpoint-versionning.ts
@@ -210,7 +210,7 @@ Add providers or modules here. These modules or provider will be built before th
 
 - type: `string[]`
 
-List of glob patterns. Exclude all files which are matching with this list when the Server scans all components with the `mount` or `scanComponents` options.
+List of glob patterns. Exclude all files that match with this list when the Server scans all components with the `mount` or `scanComponents` options.
 
 ### scopes
 
@@ -346,7 +346,7 @@ Default logger used by Ts.ED is [@tsed/logger](https://logger.tsed.io).
 Some options are provided:
 
 - `logger.level`: Change the default log level displayed in the terminal. Values: `debug`, `info`, `warn` or `error`. By default: `info`. 
-- `logger.logRequest`: Log all incoming requests. By default is true and prints the configured `logger.requestFields`.
+- `logger.logRequest`: Log all incoming requests. By default, it is true and prints the configured `logger.requestFields`.
 - `logger.requestFields`: Fields displayed when a request is logged. Possible values: `reqId`, `method`, `url`, `headers`, `body`, `query`,`params`, `duration`.
 - `logger.reqIdBuilder`: A function called for each incoming request to create a request id.
 - `logger.jsonIndentation`: The number of space characters to use as white space in JSON output. Default is 2 (0 in production).
@@ -355,12 +355,12 @@ Some options are provided:
 - `logger.ignoreUrlPatterns` (`String` or `RegExp`): List of patterns to ignore logged request according to the `request.url`.
 
 ::: warning
-It is recommended to disable logRequest in production. Logger have a cost on the performance.
+It is recommended to disable logRequest in production. Logger has a cost on the performance.
 :::
 
 ### Request logger
 
-For each Express.Request, a logger will be attached and can be used like here:
+For each Express.Request, a logger will be attached and can be used as shown here:
 
 ```typescript
 import {Controller, Context, Get, RequestLogger} from "@tsed/common";
